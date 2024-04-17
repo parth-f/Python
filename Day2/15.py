@@ -15,7 +15,6 @@ while(True):
         product *= int(user_in)
     print("Press 'q' to quit, ",end="")
 
-print("")
 print("Product of all",product,"Avg of all",product/cnt,sep=" ")
 
 
