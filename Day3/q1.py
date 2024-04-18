@@ -1,0 +1,12 @@
+# >>> type(0)
+# <class 'int'>
+# >>> type(0.0)
+# <class 'float'>
+# >>> type('A') 
+# <class 'str'>
+# >>> type(print)
+# <class 'builtin_function_or_method'>
+# >>> type(3+3j)
+# <class 'complex'>
+# >>> type(True)
+# <class 'bool'>

@@ -11,5 +11,8 @@ for n in range(user_num):
     sum += (int("9"*(n+1)))
 print("]",end="")
 
-print("")
 print(sum)
+
+# Enter a num - 4
+# [9 + 99 + 999 + 9999 + ]
+# 11106
