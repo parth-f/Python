@@ -1,3 +1,3 @@
 # Learning Python Everyday
 
-- consitencey is the key to achive perfection
+- consitencey is the key to achieve perfection
