@@ -2,6 +2,6 @@
 
 t16 = ("new","tuple","will","be","convert","a","dict")
 
-# dict_t16 = dict(t16)
+di = {"new":2,4:"four"}
 
-# print(t16, dict_t16)
+print(di,type(di
