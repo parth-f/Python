@@ -17,10 +17,11 @@ def encode_ROT13(secret_msg :str):
             out_str += encode_caesar_cipher[char_selected]
         else:
             out_str += char_selected
-            
+
     return out_str
     
 print( encode_ROT13(secret_msg) )
+
 
 
 # Detail Question Brief intro 
