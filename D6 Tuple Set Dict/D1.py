@@ -17,16 +17,27 @@
 
 encode_caesar_cipher = {'a':'n', 'b':'o', 'c':'p', 'd':'q', 'e':'r', 'f':'s', 'g':'t', 'h':'u', 'i':'v', 'j':'w', 'k':'x', 'l':'y', 'm':'z', 'n':'a', 'o':'b', 'p':'c', 'q':'d', 'r':'e', 's':'f', 't':'g', 'u':'h', 'v':'i', 'w':'j', 'x':'k', 'y':'l', 'z':'m', 'A':'N', 'B':'O', 'C':'P', 'D':'Q', 'E':'R', 'F':'S', 'G':'T', 'H':'U', 'I':'V', 'J':'W', 'K':'X', 'L':'Y', 'M':'Z', 'N':'A', 'O':'B', 'P':'C', 'Q':'D', 'R':'E', 'S':'F', 'T':'G', 'U':'H', 'V':'I', 'W':'J', 'X':'K', 'Y':'L', 'Z':'M'}
 
-print(encode_caesar_cipher['a'])
-
 secret_msg = "Pnrfne pvcure? V zhpu cersre Pnrfne fnynq!"
 
-for len in range(len(secret_msg)):
-    # print(secret_msg[len],sep="",end="")
-    v = secret_msg[len]
-    print(v,type(v))
-    if( ord("A") <= int(v) <= ord("Z") or ord("a") <= int(v) <= ord("z")):
-        print(v)
-    # else:
-    #     print(v)
+
+def encode_ROT13(secret_msg :str):
+    out_str = ""
+    for char in range(len(secret_msg)):
+        
+        """   This is Decoding part of the Code    """
+
+        char_selected = secret_msg[char]        
+    
+        if( ord("A") <= ord(char_selected) <= ord("Z") or ord("a") <= ord(char_selected) <= ord("z")):
+
+            out_str += encode_caesar_cipher[char_selected]
+
+        else:
+            out_str += char_selected
+            
+    return out_str
+    
+print(encode_ROT13(secret_msg))
+
+
 
