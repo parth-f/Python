@@ -3,8 +3,7 @@
 #   Ask user if they want to continue to accept multiple values.
 #   Display following menu:
 
-rto_register = dict()
-
+# Funtions Definations
 def new_registeration(rto_register): # function to 
 
     # FUNCTIONS - Check if Name is Duplicateds
@@ -41,24 +40,92 @@ def new_registeration(rto_register): # function to
             break
 
     return rto_register
+def print_menu(): # This Functions Prints the Menu    
+    print("""
+    ------MENU-------
+1 - Add New Entry
+2 - Del a Entry
+3 - Modify a Entry
+4 - Search for a Entry
+5 - Search vechile owners
+6 - Display all person name
+7 - Display all vechile name
+0 - Exit
+    ----------------
+    """)
 
-print("""
-Menu
-----------------
-a. Add New Entry
-b. Del Entry
-c. Modify Entry
-d. Search 
-e. Search list of people with give vechile name
-f. Display all person name
-g. Display all vechile name
-e. Exit
-----------------
-""")
+print("\nWELCOME TO VECHILE REGISTRATION CAMP")
 
-user_input = input("Enter Option - ")
-rto_register = new_registeration(rto_register)
-print(rto_register)
+rto_register = dict()
+
+while(True):
+
+    # Exit Condition 
+    exit_val = False
+    if exit_val == True:
+        exit
+    
+    # Prints Menu
+    print_menu()
+
+    # Takes Input From User 
+    user_input = int(input("Enter Option - "))
+    print("")
+
+    # Do Action As per User Request
+    match user_input:
+        case 1: # a. New Entry 
+
+            rto_register = new_registeration(rto_register)
+            print(rto_register)   
+
+        case 2: # b. Del Entry 
+
+            del_key = (input("Name of Person to delete his entry - ")).title()
+            
+            for p in rto_register.keys():
+                if p == del_key :
+                    print(f"Entey of {p} found is begin deleted")
+                    del rto_register[del_key]
+                else:
+                    print(f"Enter of {del_key} not found")
+
+            print(rto_register)
+
+        case 3: # c. Modify Vechinal Name 
+
+            edit_vehicle = (input("Edit vehicle of Name - ")).title()
+
+            for p in rto_register.keys():
+                if p == edit_vehicle :
+                    rto_register[edit_vehicle] = input(f"Enter new vehicle of {edit_vehicle} - ")
+            print(f"Entry of {edit_vehicle} not found")
+                
+            print(rto_register)
+
+        case 4: # d. Search for Person Entry 
+
+            find = (input("Find Entry of - ")).title()
+
+            for p in rto_register.keys():
+                if p == find :
+                    print(f"Entery Found - [ {find} : {rto_register[find]} ]")
+                    continue
+            print(f"Entry of {find} not found")
+
+        case 5: # e. Search for Vechile Entry 
+
+            pass
+        case 6: # f. Display all person 
+            print(rto_register.keys())
+        case 7: # g. Display all vechiles names
+            print(rto_register.values())
+        case 0: # h. Exit
+            exit_val = True
+            break
+    
+
+
 
 
 
