@@ -3,3 +3,4 @@
 # Test Data :
 # Input the value of x :3 Input number of terms : 5 Expected Output :
 # The sum is : 16.375000
+

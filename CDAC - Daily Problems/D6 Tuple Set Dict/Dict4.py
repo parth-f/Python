@@ -61,9 +61,9 @@ rto_register = dict()
 while(True):
 
     # Exit Condition 
-    exit_val = False
-    if exit_val == True:
-        exit
+    exit_value = False
+    if exit_value == True:
+        break
     
     # Prints Menu
     print_menu()
@@ -72,8 +72,9 @@ while(True):
     user_input = int(input("Enter Option - "))
     print("")
 
-    # Do Action As per User Request
-    match user_input:
+    
+    match user_input:           # MATCH CASE - Do Action As per User Request using
+        
         case 1: # a. New Entry 
 
             rto_register = new_registeration(rto_register)
@@ -81,20 +82,22 @@ while(True):
 
         case 2: # b. Del Entry 
 
+            print(rto_register)
             del_key = (input("Name of Person to delete his entry - ")).title()
             
-            for p in rto_register.keys():
-                if p == del_key :
-                    print(f"Entey of {p} found is begin deleted")
+            for key in rto_register.keys():
+                if key == del_key :
+                    print(f"Entey of {del_key} found is begin deleted")
                     del rto_register[del_key]
-                else:
-                    print(f"Enter of {del_key} not found")
+                    break
+            else:
+                print(f"Entry of {del_key} not found")
 
             print(rto_register)
 
         case 3: # c. Modify Vechinal Name 
 
-            edit_vehicle = (input("Edit vehicle of Name - ")).title()
+            edit_vehicle = (input("Name the person whose Vechinal youu wanna edit - ")).title()
 
             for p in rto_register.keys():
                 if p == edit_vehicle :
@@ -110,18 +113,26 @@ while(True):
             for p in rto_register.keys():
                 if p == find :
                     print(f"Entery Found - [ {find} : {rto_register[find]} ]")
-                    continue
-            print(f"Entry of {find} not found")
+                    break
+            else:
+                print(f"Entry of {find} not found")
 
         case 5: # e. Search for Vechile Entry 
 
-            pass
+            find_vec = input("Enter the name of vechile owner you wanna find - ")
+
+            for name, vec in rto_register.items():
+                if vec == find_vec:
+                    print(f"This vechile - {vec} is owned by {name}")
+            
         case 6: # f. Display all person 
-            print(rto_register.keys())
+            print(rto_register)
+
         case 7: # g. Display all vechiles names
             print(rto_register.values())
+
         case 0: # h. Exit
-            exit_val = True
+            exit_value = True
             break
     
 

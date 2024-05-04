@@ -2,21 +2,19 @@
 people={'Arham':'Blue','Lisa':'Yellow','Vinod':'Purple','Jenny':'Pink'}
 
 ## a. Find out how many students are in the list
-print("Num of students =", len( list(people.keys()) ) )
-
-# output > Num of students = 4
-
 ## b. Change Lisa’s favourite colour
+## c. Remove 'Jenny' and her favourite colour
+
+print("Num of students =", len( list(people.keys()) ) )
+# a. output > Num of students = 4
+
 people['Lisa']='Green'
 print("Lisa fav Color is",people['Lisa'])
+# b. output > Lisa fav Color is Green
 
-# output > Lisa fav Color is Green
-
-## c. Remove 'Jenny' and her favourite colour
 del people['Jenny']
 print(people)
-
-# output > {'Arham': 'Blue', 'Lisa': 'Green', 'Vinod': 'Purple'}
+# c. output > {'Arham': 'Blue', 'Lisa': 'Green', 'Vinod': 'Purple'}
 
 
 
