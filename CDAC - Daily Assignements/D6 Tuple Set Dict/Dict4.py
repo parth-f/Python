@@ -134,8 +134,6 @@ while(True):
         case 0: # h. Exit
             exit_value = True
             break
-    
-
 
 
 
