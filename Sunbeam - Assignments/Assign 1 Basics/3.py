@@ -29,3 +29,8 @@ print("")
 
 # c. 
 print(fd_num[::-1])
+
+# Enter a four digit num - 9361
+# 9  3  6  1  
+# 9361 = 9000 + 300 + 60 + 1 
+# 1639
