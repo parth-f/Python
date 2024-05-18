@@ -5,7 +5,6 @@ in1 = int(input("Enter value of x - "))
 
 class WrongOperator(Exception):
     "Raised when the Operator input is Provided Wrong by the User"
-    pass
 try:
     opp = input("Enter opperations - (+) (-) (*) (/) - ")
     if opp != "+" and opp != "-" and opp != "*" and opp != "/":
@@ -40,3 +39,5 @@ match(opp):
         print(multt(in1,in2))
     case "/":
         print(divv(in1,in2))
+    case _:
+        print("Somthing")
