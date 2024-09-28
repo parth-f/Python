@@ -1,0 +1,23 @@
+Lambda and map Function Assignments
+
+
+Q Sort all the numbers in a list in descending order using lambda function
+sorted(l1, key=(lambda x:-x))
+
+Q Sort all the characters of given string using lambda function
+
+Q Given list of strings, sort all the strings by last character of that string. . Use lambda function and normal function both.
+
+Q Given list of employees. This list may contain repetitions. Find all unique employee names and print them as per order of second character in that name. Use lambda function and normal function both.
+
+Q. Take Employee id and Employee name of 5 employees from user. Store it in dictionary. Print all employees in increasing order of employee Id . Also print all employees in alphabetical order by name.
+
+Q. Take comma separated numbers as input from the user. Split it in list of strings. Now convert every string in this list to float using map function
+
+Q Given list of floating point numbers. Convert every number into string and then join all the numbers such that they are separated by pipe(|)
+
+Q Given list of integers. Use map function to calculate square of all and store in list. Then print sum of all square values.
+
+
+
+
